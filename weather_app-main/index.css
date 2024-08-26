@@ -1,0 +1,103 @@
+/* General Styles */
+.background {
+    display: flex; /* Flexbox for centering */
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    padding: 0 1rem; /* Add some padding for smaller screens */
+}
+#searchButton{
+    border: none;
+    background-color: transparent;
+    
+}
+input{
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px lightblue inset;
+}
+/* Adjust the container size and properties */
+.container {
+    height: auto; /* Adjust height dynamically */
+    width: 90%; /* Make it fluid */
+    max-width: 25rem; /* Cap the maximum width */
+    border-radius: 30px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+    background: url('bg.jpg') no-repeat center/cover;
+    padding: 1rem; /* Add padding for content spacing */
+    margin-bottom: 2rem; /* Margin to prevent overflow */
+}
+
+/* Responsive typography and layout */
+.temp {
+    font-size: 3rem; /* Use rem units for responsive typography */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.state, .state2 {
+    font-weight: bold;
+    font-size: 2.5rem; /* Smaller font size for smaller screens */
+    text-align: center;
+}
+
+.state_container, .state_container2 {
+    text-align: center;
+    margin: 1rem 0; /* Adjust margins for better spacing */
+}
+
+.humidity, .wind, .h_name, .w_name {
+    font-size: 1.2rem; /* Make font size responsive */
+    color: aliceblue;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.h_icon, .w_icon {
+    font-size: 2rem; /* Adjust icon size */
+    text-align: center;
+    margin: 0.5rem;
+}
+
+/* Media Queries */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        height: auto;
+        width: 80%;
+        max-width: 55rem; /* Increased max width for larger screens */
+    }
+
+    input {
+        width: 90%;
+        max-width: 770px;
+        height: 3rem; /* Adjust height */
+    }
+
+    .temp {
+        font-size: 4rem;
+    }
+
+    .state, .state2 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    .container {
+        width: 50%; /* Use a percentage for width */
+        max-width: 26rem;
+    }
+
+    input {
+        width: 80%; /* Adjust width */
+        height: 2.5rem; /* Adjust height */
+    }
+
+    .temp {
+        font-size: 5rem;
+    }
+
+    .state, .state2 {
+        font-size: 4rem;
+    }
+}
